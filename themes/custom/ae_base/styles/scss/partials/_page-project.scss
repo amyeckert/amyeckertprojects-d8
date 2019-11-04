@@ -1,0 +1,327 @@
+.page_project,
+.case-study {
+    .project_title {
+        // display: block;
+        // font-family: $f-body;
+        // grid-column: col-2/span col-5;
+    }
+}
+
+.page_project,
+.page_case-study {
+    .project_header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        // background-color: blue;
+    }
+    .project_title {
+        display: block;
+        font-family: $f-body;
+        grid-column: col-2/span col-5;
+    }
+
+    .project_header-info {
+        text-align: right;
+        width: 3.75rem;
+    }
+
+    .open-statement {
+        color: $c-grey-med;
+        font-family: $f-title;
+        font-style: italic;
+        padding-top: 1.8rem;
+        cursor: pointer;
+    }
+
+    .carousel-nav {
+        display: block;
+
+        .thumbs-only {
+            height: 40px;
+            width: 84%;
+
+            // #thumbnails-icon {
+            // 	height: 25px;
+
+            // 	.cls-1 {
+            // 		fill: $c-grey-med;
+            // 	}
+
+            // 	&:hover {
+            // 		.cls-1 {
+            // 			fill: $c-coral;
+            // 		}
+            // 	}
+            // }
+        }
+    }
+}
+
+//---------- Interactive projects landing page only --------//
+#interactive {
+    .interactive-project {
+        display: block;
+        margin: 10px 0;
+        .show-caption {
+            display: block;
+            color: $c-grey-med;
+            padding: 0 10px;
+            a {
+                text-align: right;
+                display: block;
+                letter-spacing: 0.7px;
+                color: $c-grey-med;
+                border-bottom: 1px solid $c-white;
+                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 0.2s ease-in-out;
+                padding-left: 10px;
+
+                &:visited {
+                    color: $c-grey-med;
+                }
+                &:active,
+                &:hover {
+                    color: $c-green-kelly;
+                    border-bottom: 1px solid $c-green-kelly;
+                }
+                span {
+                }
+            }
+        }
+    }
+}
+
+// Statement MODAL ----------------//
+.modal-on {
+    overflow: hidden;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: $c-white;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .modal {
+        background-color: $c-grey-light;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 20px;
+        position: relative;
+        top: 57%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: left;
+        z-index: 2;
+        padding: 1rem;
+
+        @include bp(xsmall) {
+            width: 80%;
+            top: 50%;
+        }
+        @include bp(small) {
+            width: 55%;
+        }
+        @include bp(medium) {
+            top: 40%;
+            padding: 2rem;
+        }
+        @include bp(large) {
+            width: 40%;
+            top: 45%;
+            padding: 3rem;
+        }
+        .modal-header {
+            height: 15px;
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+            margin-bottom: 1rem;
+
+            @include bp(small) {
+                height: 40px;
+            }
+
+            @include bp(large) {
+                height: 35px;
+            }
+
+            .close {
+                color: $c-text;
+                width: 5.4rem;
+                position: absolute;
+                right: 0;
+                top: 0;
+                border: none;
+                background-color: transparent;
+                text-transform: capitalize;
+                font-size: $base-font-size;
+                font-style: italic;
+
+                @include bp(small) {
+                    padding: 12px;
+                }
+
+                .icon-close {
+                    position: absolute;
+                    top: 30%;
+                    right: 0;
+                    height: 15px;
+                    width: 15px;
+                }
+            }
+        }
+
+        .modal-content {
+            width: 100%;
+            padding: 0 0 1rem 0;
+        }
+    }
+}
+
+.statement-body {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 0.8rem;
+    background-color: $c-white;
+    color: $c-grey-med;
+
+    @include bp(small) {
+        width: 80%;
+    }
+    @include bp(medium) {
+        width: 75%;
+    }
+    p {
+        letter-spacing: 0.02rem;
+        margin: 1rem auto;
+
+        @include bp(small) {
+            letter-spacing: 0;
+        }
+    }
+    span {
+        border-bottom: 1px solid $c-grey-med;
+        color: $c-grey-med;
+        text-decoration: none;
+
+        &:hover {
+            color: $c-orange-light;
+            border-bottom: 1px solid $c-orange-light;
+        }
+        a {
+            &:hover {
+                color: $c-orange-light;
+            }
+        }
+    }
+}
+
+#manhome {
+    .project-name {
+        padding-top: 7px;
+    }
+
+    .open-statement {
+        display: none;
+
+        @include bp(small) {
+            display: block;
+            // @include font-size(18);
+            max-width: 25%;
+            height: 35px;
+            padding: 7px 20px 0 20px;
+            color: $c-grey-med;
+            border-left: 1px solid $c-grey-med;
+            text-transform: lowercase;
+        }
+    }
+
+    @include bp(small) {
+        .modal-container {
+            .modal {
+                top: 55%;
+                overflow: scroll;
+                height: 715px;
+                width: 60%;
+
+                @include bp(medium) {
+                    width: 75%;
+                    height: 600px;
+                }
+
+                .statement-body-modal {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-flow: column nowrap;
+                    flex-flow: column nowrap;
+                    width: 100%;
+                    margin: 0 auto;
+                    -webkit-box-flex: 1;
+                    -ms-flex: 1 0 auto;
+                    flex: 1 0 auto;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    color: $c-grey-med;
+                    p {
+                        line-height: 1.3;
+                        margin-bottom: 1.2rem;
+                        em {
+                            font-style: italic;
+                        }
+                    }
+
+                    @include bp(small) {
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                        -ms-flex-flow: row nowrap;
+                        flex-flow: row nowrap;
+                    }
+
+                    .statement-col-left {
+                        width: 75%;
+                        @include bp(small) {
+                            width: 40%;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .statement-col-right {
+                        width: 75%;
+                        @include bp(small) {
+                            width: 40%;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

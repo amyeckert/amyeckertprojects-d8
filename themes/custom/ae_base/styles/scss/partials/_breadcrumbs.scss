@@ -1,0 +1,49 @@
+// BREADCRUMBS SECTION
+
+.breadcrumbs {
+    // grid-column: col-1;
+    // grid-row: row-3;
+    height: 5.5rem;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // justify-content: center;
+    // align-items: center;
+
+    @media (min-width: $bp-small) {
+        justify-content: flex-start;
+    }
+
+    .nav_level-2 {
+        font-family: $f-title;
+        color: $c-grey-med;
+        text-decoration: none;
+
+        a {
+            border-bottom: none;
+
+            &:hover {
+                border: none;
+            }
+        }
+
+        .breadcrumbs-item {
+            margin-bottom: 0.675rem;
+
+            a {
+                display: block;
+                border-bottom: 1px solid transparent;
+                height: 1.3rem;
+                margin-left: 1rem;
+
+                &:hover {
+                    border-bottom: 8px solid $c-coral;
+                }
+            }
+        }
+        .breadcrumbs-item--top {
+            font-style: italic;
+            margin-bottom: 1rem;
+            margin-top: 13.4rem;
+        }
+    }
+}

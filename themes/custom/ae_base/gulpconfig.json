@@ -1,0 +1,34 @@
+{
+  "browserSyncOptions" : {
+    "proxy": "localhost/",
+    "notify": false
+  },
+  "browserSyncWatchFiles" : [
+    "./public/wp-content/themes/royal-ny/css/*.min.css",
+    "./public/wp-content/themes/royal-ny/js/*.min.js",
+    "./public/wp-content/themes/royal-ny/**/*.php"
+  ],
+  "paths" : {
+    "js": "./public/wp-content/themes/royal-ny/js",
+    "css": "./public/wp-content/themes/royal-ny/css",
+    "img": "./public/wp-content/themes/royal-ny/img",
+    "imgsrc": "./public/wp-content/themes/royal-ny/src/img",
+    "sass": "./public/wp-content/themes/royal-ny/sass",
+    "node": "./node_modules/",
+    "theme": "./public/wp-content/themes/royal-ny",
+    "bower": "./public/wp-content/themes/royal-ny/bower_components/",
+    "dev": "./public/wp-content/themes/royal-ny/src",
+    "dist": "./dist",
+    "vendor": "",
+    "sshkey": "./ssh/royal-ny.pem"
+  },
+  "vars" : {
+    "dist" : ["public/**/*",
+      "!public/wp-admin", "!public/wp-admin/**",
+      "!public/wp-includes", "!public/wp-includes/**",
+      "!public/index.php", "!public/license.txt", "!public/readme.html", "!public/wp-activate.php", "!public/wp-blog-header.php", "!public/wp-comments-post.php",
+      "!public/wp-config.php", "!public/wp-config-sample.php", "!public/wp-cron.php", "!public/wp-links-opml.php", "!public/wp-load.php", "!public/wp-login.php",
+      "!public/wp-mail.php", "!public/wp-settings.php", "!public/wp-signup.php", "!public/wp-trackback.php", "!public/xmlrpc.php"
+    ]
+  }
+}

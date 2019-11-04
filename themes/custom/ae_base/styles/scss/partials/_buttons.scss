@@ -1,0 +1,44 @@
+button,
+.btn {
+    display: block;
+    outline: none;
+    border: none;
+    background-color: $c-white;
+    border-bottom: 1px solid $c-white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-family: $f-title;
+    text-transform: capitalize;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn-back {
+    order: 2;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border-left: 1px solid $c-grey-med;
+    padding: 0 0 0 0;
+    height: 100%;
+    min-width: 125px;
+    color: $c-grey-med;
+
+    @include bp(small) {
+        height: 32px;
+        padding: 0 0 0 0;
+    }
+
+    p {
+        display: block;
+        padding: 0 10px 0 5px;
+        // @include font-size(18);
+        text-transform: lowercase;
+    }
+
+    svg {
+        height: 15px;
+    }
+}

@@ -1,0 +1,101 @@
+// landing page for grid of all projects
+
+.portfolio_header {
+}
+
+.project-row.grid {
+    .grid-sizer {
+        // width: 100%;
+        // height: auto;
+
+        // @include bp(small) {
+        //     width: 100%;
+        // }
+
+        .grid-item {
+            width: 100%;
+            // height: auto;
+            // margin-bottom: 0;
+            // cursor: pointer;
+
+            // @include bp(small) {
+            //     float: none;
+            //     width: 33.333%;
+            // }
+
+            .grid-item_link {
+                // display: block;
+                // height: 100%;
+                // width: 100%;
+                // text-decoration: none;
+                // border: none;
+                // color: $c-white;
+
+                .grid-item_image {
+                    // width: 100%;
+                    // height: auto;
+                    // padding: 0;
+                }
+
+                .grid-item_details--project {
+                    // opacity: 0;
+                    // -webkit-transition: opacity 0.2s ease-in;
+                    // transition: opacity 0.2s ease-in;
+                }
+            }
+
+            // &:hover {
+            //     .grid-item_details--project {
+            //         visibility: visible;
+            //         color: $c-white;
+            //         position: absolute;
+            //         top: 0;
+            //         right: 0;
+            //         height: 50%;
+            //         width: 50%;
+            //         background-color: $c-green-kelly;
+            //         opacity: 0.87;
+            //     }
+            // }
+
+            //  portfolio landing pages
+            .grid-item_details--project {
+                .grid-item_title,
+                .title {
+                    // display: block;
+                    // position: absolute;
+                    // top: 40%;
+                    // left: 50%;
+                    // -webkit-transform: translateX(-50%);
+                    // transform: translateX(-50%);
+                    // color: $c-white;
+                    // text-transform: uppercase;
+                    // font-size: 2rem;
+                    // font-weight: 700;
+                }
+            }
+
+            // project gallery items
+            .grid-item_details--single-item {
+            }
+        }
+    }
+
+    // .grid-sizer {
+    // }
+    // .grid-item {
+    //     figure {
+    //         a {
+    //             display: block;
+    //             width: 33.33%;
+
+    //             img {
+    //                 width: 100%;
+    //                 height: auto;
+    //             }
+    //             .project-title {
+    //             }
+    //         }
+    //     }
+    // }
+}

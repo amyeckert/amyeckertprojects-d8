@@ -1,0 +1,260 @@
+//----------------- Gallery Grids ------------------//
+.gallery_section {
+    .grid {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+        order: 4;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 0 0 0;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .statement-mobile {
+            display: block;
+            max-width: 90%;
+            margin: 1.5rem auto 1rem auto;
+            color: $c-grey-med;
+            font-size: 1.2rem;
+            line-height: 1.2;
+
+            @include bp(small) {
+                display: none;
+            }
+
+            p {
+                margin-bottom: 1.2rem;
+            }
+        }
+
+        @include bp(medium) {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            float: right;
+            margin-right: 0;
+            width: 100%;
+        }
+
+        .grid-sizer {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+
+            @include bp(small) {
+                width: 100%;
+            }
+
+            .grid-item {
+                width: 100%;
+                height: auto;
+                margin-bottom: 0;
+                cursor: pointer;
+
+                @include bp(small) {
+                    float: none;
+                    width: 33.333%;
+                }
+
+                .grid-item_image {
+                    width: 100%;
+                    height: auto;
+                    padding: 0;
+                }
+
+                .grid-item_details--project {
+                    // display: none;
+                    opacity: 0;
+                    -webkit-transition: opacity 0.2s ease-in;
+                    transition: opacity 0.2s ease-in;
+                    p {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    // portfolio landing pages
+                    .grid-item_details--project {
+                        display: block;
+                        color: $c-white;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: $c-green-kelly;
+                        opacity: 0.87;
+
+                        .grid-item_link {
+                            display: block;
+                            height: 100%;
+                            width: 100%;
+                            border: none;
+                        }
+
+                        .grid-item_title {
+                            display: block;
+                            position: absolute;
+                            top: 40%;
+                            left: 50%;
+                            -webkit-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                            text-decoration: none;
+                            color: $c-white;
+                            text-transform: uppercase;
+                            font-size: 2rem;
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                // project gallery items
+                .grid-item_details--single {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /*---------------------- CAROUSEL -------------------*/
+    .carousel {
+        display: none;
+        position: relative;
+
+        @include bp(small) {
+            display: none;
+            -webkit-box-ordinal-group: 6;
+            -ms-flex-order: 5;
+            order: 5;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+            margin-bottom: 5px;
+        }
+        @include bp(medium) {
+            display: none;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+        }
+
+        .big {
+            display: none;
+
+            @include bp(small) {
+                display: block;
+                width: 100%;
+            }
+
+            .big-img-container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                visibility: visible;
+                width: 100%;
+                height: 60vh;
+                margin-left: 0;
+                margin-top: 0;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .image-info {
+                clear: both;
+                -ms-flex-item-align: end;
+                align-self: flex-end;
+                display: block;
+                visibility: visible;
+                color: $c-grey-med;
+                // @include font-size(15);
+                visibility: visible;
+                height: 40px;
+                width: 100%;
+                margin-left: 0;
+                text-align: left;
+
+                @include bp(small) {
+                    height: 30px;
+                    margin-top: 10px;
+                }
+                p {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 10px;
+                    &:first-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+        .previous,
+        .next {
+            height: 75px;
+            width: 75px;
+            position: absolute;
+            top: 50%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .previous {
+            left: -95px;
+        }
+
+        .next {
+            right: -95px;
+        }
+    }
+    //------------------ CAROUSEL CONTROLS ---------------------//
+    .carousel-nav {
+        display: none;
+
+        @include bp(small) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 35px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-ordinal-group: 7;
+            -ms-flex-order: 6;
+            order: 6;
+            -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+            align-items: stretch;
+        }
+
+        button {
+            display: inline-block;
+            color: $c-grey-med;
+            padding: 0 10px;
+        }
+
+        .thumbs-only {
+            padding: 0;
+
+            svg {
+                display: inline-block;
+                height: 25px;
+            }
+
+            #thumbnails-icon {
+                @include bp(medium) {
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+name: AE Base
+type: theme
+description: 'Sub theme based on Classy D8'
+core: 8.x
+# by adding global-styling and global-scripts here, the css/js files in the library become 
+# available to every page presented by the theme
+libraries:
+  - ae_base/global-css
+  - ae_base/global-js
+
+# to attach a library to a specific page or group of pages, use this in html.
+# {{ attach_library('fluffiness/cuddly-slider') }}
+# <div>Some fluffy markup {{ message }}</div>
+
+base theme: classy
+regions:
+  header: Header
+  content: 'Content'
+  primary_menu: 'Main menu' 
+  sidebar_first: 'Sidebar first'
+  page_top: 'Page Top'
+  breadcrumb: 'Breadcrumb'
+  page_bottom: 'Page Bottom'
+  footer: Footer
+  footer_mobile: 'Footer Mobile'

@@ -1,0 +1,63 @@
+//------------COLORS -------------//
+$c-white: #fff;
+$c-orange-dark: #a84420;
+$c-teal: #5f9797;
+$c-purple: #8a5cd1;
+$c-blue-med: #4866fb;
+$c-green-kelly: #099949;
+$c-green-olive: #98983e;
+$c-orange-light: #b56618;
+$c-orange-background: rgba(181, 102, 24, 0.5);
+$c-cyan: #68b7d5;
+$c-magenta: #820064;
+
+// new colors
+$c-text: hsla(210, 13%, 9%, 1); // #14171A
+$c-grey-med: hsla(212, 13%, 19%, 1); // #2A3037
+$c-grey-light: hsla(0, 0%, 91%, 1); // #E8E8E8
+$c-grey-warm: hsla(37, 10%, 75%, 1); // #C7C2BA
+$c-coral: hsla(4, 95%, 64%, 1); // #FA574A
+$c-coral-light: hsla(13, 75%, 56%, 1); // #E35D39
+$c-orange: hsla(21, 98%, 62%, 1); // #FD833F
+$c-yellow: hsla(55, 100%, 36%, 1); // #E0CC00
+
+
+$f-body: 'Quattrocento', serif;
+$f-logo: 'Josefin Sans', sans-serif;
+$f-title: $f-logo;
+
+$base-font-size: 1rem; // Assumes the browser default, typically `16px`
+$base-line-height: $base-font-size * 1.8;
+
+$h1-font-size: $base-font-size * 3;
+$h2-font-size: $base-font-size * 2.3;
+$h3-font-size: $base-font-size * 1.5;
+$h4-font-size: $base-font-size * 1.3;
+$h5-font-size: $base-font-size * 1.1;
+$small-font-size: $base-font-size * 0.9;
+
+//------------ units -------------//
+$nav-up: -3rem;
+$nav-down: 3rem;
+
+//------------ BREAKPOINTS -------//
+$bp-xsmall: 340;
+$bp-small: 768;
+$bp-medium: 1024;
+$bp-large: 1200;
+$bp-xlarge: 1500;
+$bp-xxlarge: 2000;
+
+//------------ MEDIA QUERIES -------//
+$mq-xsmall: 'only screen and (min-width: #{$bp-xsmall}px)';
+$mq-small: 'only screen and (min-width: #{$bp-small}px)';
+$mq-medium: 'only screen and (min-width: #{$bp-medium}px)';
+$mq-large: 'only screen and (min-width: #{$bp-large}px)';
+$mq-xlarge: 'only screen and (min-width: #{$bp-xlarge}px)';
+$mq-retina: 'only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx)';
+
+// grid spacing
+$base-vertical-margin: 15px;
+$base-horizontal-margin: 15px;
+$grid-padding-vertical: ($base-vertical-margin *2);
+$grid-padding-horizontal: ($base-vertical-margin *2);

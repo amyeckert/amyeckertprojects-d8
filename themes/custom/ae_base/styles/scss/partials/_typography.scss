@@ -1,0 +1,79 @@
+.h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: bold;
+    color: $c-text;
+}
+
+.h1 {
+    margin-bottom: 2rem;
+    font-size: $h2-font-size;
+
+    @include bp(xsmall) {
+        font-size: $h1-font-size;
+    }
+}
+
+.h2 {
+    font-size: $h2-font-size;
+    margin-bottom: 1.5rem;
+}
+
+.h3 {
+    font-size: $h3-font-size;
+    margin-bottom: 1.3rem;
+}
+
+.h4 {
+    font-size: $h4-font-size;
+}
+
+.h5 {
+    font-size: $h5-font-size;
+}
+
+.logo {
+    font-family: $f-logo;
+    font-size: 55px;
+    color: $c-text;
+}
+
+.headline-block_quote,
+blockquote {
+    font-style: italic;
+    max-width: 75%;
+    color: $c-grey-med;
+    font-size: $h3-font-size;
+}
+
+cite,
+.label {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: $c-grey-med;
+}
+
+// inline link style
+a {
+    text-decoration: none;
+    border-bottom: 1px solid $c-text;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: $c-text;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover {
+        border-bottom: 5px solid $c-coral;
+    }
+    &:visited {
+        color: $c-grey-med;
+    }
+
+    span {
+        color: $c-text;
+    }
+}

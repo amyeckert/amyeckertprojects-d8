@@ -1,0 +1,90 @@
+//----------------- CONTACT PAGE ------------------------------------*/
+
+form {
+    width: 100%;
+    font-family: $f-title;
+    color: $c-grey-med;
+
+    .form_item {
+        margin-bottom: 0.5rem;
+
+        input[type='text'],
+        input[type='email'],
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            background-color: transparent;
+            color: $c-grey-med;
+            border: 1px solid $c-grey-med;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            font-family: $f-title;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+
+            &:hover,
+            &:active,
+            &:focus {
+                outline: 2px solid $c-grey-med;
+            }
+        }
+
+        textarea {
+            min-height: 9.3rem;
+            margin-bottom: 1rem;
+
+            @include bp(small) {
+                height: 4rem;
+            }
+        }
+    }
+
+    .form_item--btn {
+        input[type='submit'] {
+            width: fit-content;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            margin: 0 auto;
+            background-color: $c-yellow;
+            color: $c-text;
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding: 1rem 3rem;
+            outline: none;
+            border: 3px solid $c-white;
+            border-radius: 0.5rem;
+
+            &:hover {
+                border: 3px solid $c-yellow;
+                cursor: pointer;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+    label {
+        color: $c-grey-med;
+    }
+
+    .is-required {
+        label {
+            display: block;
+            position: relative;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            padding-right: 0.8rem;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                content: '*';
+                color: $c-coral;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

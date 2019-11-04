@@ -1,0 +1,117 @@
+// ---HEADLINE AND HALF-WIDTH TEXT BLOCK --- //
+
+.headline-block_section {
+    grid-column: col-2/span col-5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+    height: auto;
+
+    .headline-block_headline,
+    .headline-block_text {
+        width: 48%;
+    }
+    .headline-block_text {
+    }
+
+    .headline-block_headline {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+.headline-block_line {
+    border-top: 1px solid $c-grey-med;
+    opacity: 0.7;
+    width: 75%;
+    margin-bottom: 3rem;
+}
+
+.headline-block_section--about {
+    height: auto;
+    display: none;
+}
+
+//------text-block full width----//
+.text-block_section {
+    margin: 2rem 0 4rem 0;
+
+    .text-block_text {
+    }
+}
+
+//---------- image block---------- //
+.image-block_section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 2rem 0;
+
+    figure {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: $c-grey-med;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.image-block_section--full {
+}
+
+.image-block_section--half {
+    figure {
+        width: 50%;
+
+        figcaption {
+        }
+    }
+}
+
+.image-block_section--thirds {
+    figure {
+        width: 33.3%;
+    }
+}
+
+.image-block_section--text {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    figure {
+        width: 48%;
+
+        figcaption {
+        }
+    }
+    .image-block_text {
+        width: 48%;
+    }
+}

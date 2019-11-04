@@ -1,0 +1,86 @@
+@mixin bp($point) {
+  @if ($MQs) {
+    @if $point == xsmall {
+      @media #{$mq-xsmall} { @content; }
+    }
+    @else if $point == small {
+      @media #{$mq-small} { @content; }
+    }
+    @else if $point == medium {
+      @media #{$mq-medium} { @content; }
+    }
+    @else if $point == large {
+      @media #{$mq-large}  { @content; }
+    }
+    @else if $point == xlarge {
+      @media #{$mq-xlarge}  { @content; }
+    }
+    @else if $point == retina {
+      @media #{$mq-retina}  { @content; }
+    }
+  }
+  @else {
+    @if $point != retina {
+      @content;
+    }
+  }
+}
+
+@mixin bp-max($point) {
+  @if $point == small {
+     @media (max-width: ($bp-small - 1px)) { @content; }
+  }
+  @else if $point == medium {
+     @media (max-width: ($bp-medium - 1px)) { @content; }
+  }
+  @else if $point == large {
+     @media (max-width: ($bp-large - 1px)) { @content; }
+  }
+}
+
+//---------- Arbitrary Media Query ---------------//
+
+@mixin bp-arb($val) {
+  @if ($MQs) {
+    @media only screen and (min-width: #{$val}px) { @content; }
+  }
+}
+
+
+
+@mixin btn-hover($color) {
+  background-color: darken($color, 15%);
+  border-color: darken($color, 15%);
+  text-decoration: none; 
+  transition: all, 0.4s;
+  color: $white;
+}
+
+
+
+// $pixelSize: 16;
+// @mixin font-size($pixelSize: $base-font-size) {
+//   font-size: #{$pixelSize / $base-font-size}rem;
+//   font-size: #{$pixelSize}px;
+// }
+
+// @mixin line-height($pixelSize: $base-line-height) {
+//   line-height: #{$pixelSize / $base-font-size}rem;
+//   line-height: #{$pixelSize}px;
+
+// }
+
+//---------- generate aspect ratios  ---------------//
+// https://benmarshall.me/responsive-iframes/
+
+@mixin generateRatios($width, $height, $prefix: "aspect-ratio-") {
+  $class-name: $prefix + $width + "x" + $height;
+ 
+  .#{$class-name} {
+    padding-bottom: ratio($width, $height);
+  }
+  // Output example: .ratio-16x9 {}
+}
+ 
+@include generateRatios(16,9); // 16x9
+@include generateRatios(4,3);  // 4x3
