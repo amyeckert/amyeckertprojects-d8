@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+## Run visual regression tests
+##
+## Usage: fin vrt
+
+# Abort if anything fails
+set -e
+
+#-------------------------- Helper functions --------------------------------
+
+
+BACKSTOP_PATH="${PROJECT_ROOT}/${DOCROOT}/modules/custom/backstop"
+echo-green () { echo -e "${green}$1${NC}"; }
+echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
+echo -e "{green} Install backstop ${NC}"
+fin drush en backstop --yes
+cd "${BACKSTOP_PATH}/server"
+npm install
+
+filesdir="${BACKSTOP_PATH}/server/backstop_data/siteId/basic"
+	if [[ ! -d $filesdir ]]; then
+		echo "No Reference Present... Generating One...."
+		node backstop.js reference basic --url="http://${VIRTUAL_HOST}" --testUrl="http://${VIRTUAL_HOST}" --referenceUrl="https://vertexinc.com"
+	  echo "Generating Test...."
+    node backstop.js test basic --url="http://${VIRTUAL_HOST}" --testUrl="http://${VIRTUAL_HOST}" --referenceUrl="https://vertexinc.com"
+	else
+		echo "Generating Test...."
+    node backstop.js test basic --url="http://${VIRTUAL_HOST}" --testUrl="http://${VIRTUAL_HOST}" --referenceUrl="https://vertexinc.com"
+	fi

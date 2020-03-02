@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+## Updates the docksal-local.env to the specified env, then pulls db/files
+##
+## Usage: fin pullfrom [environment]
+
+echo "DOCKSAL_STACK=default" > $PROJECT_ROOT/.docksal/docksal-local.env
+echo "DOCROOT=." >> $PROJECT_ROOT/.docksal/docksal-local.env
+echo "HOSTING_PLATFORM=\"pantheon\"" >> $PROJECT_ROOT/.docksal/docksal-local.env
+echo "HOSTING_SITE=\"amyeckert-d8\"" >> $PROJECT_ROOT/.docksal/docksal-local.env
+echo "HOSTING_ENV=\""$1"\"" >> $PROJECT_ROOT/.docksal/docksal-local.env
+
+fin pull db -y && fin pull files -y

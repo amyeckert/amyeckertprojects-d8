@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+## Run visual regression tests
+##
+## Usage: fin vrt
+
+# Abort if anything fails
+set -e
+
+#-------------------------- Helper functions --------------------------------
+
+
+BACKSTOP_PATH="${PROJECT_ROOT}/${DOCROOT}/modules/custom/backstop"
+echo-green () { echo -e "${green}$1${NC}"; }
+echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
+echo -e "{green} Install backstop ${NC}"
+#fin drush en backstop --yes
+cd "${BACKSTOP_PATH}/server"
+#npm install
+
+echo node backstop.js $@ --url="http://${VIRTUAL_HOST}"
+node backstop.js $@ --url="http://${VIRTUAL_HOST}"
